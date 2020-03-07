@@ -1,0 +1,72 @@
+.basic-details-card {
+  display: flex;
+  justify-content: center;
+}
+
+.main-card {
+  width: 80em;
+  margin-top: 1em;
+}
+
+.card-header {
+  display: flex;
+  justify-content: center;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.basic-form {
+  display: flex;
+  justify-content: center;
+  padding-top: 1em;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-field {
+  width: 25em;
+}
+.question {
+  font-family: Noto Serif, serif;
+  font-size: 30px;
+  color: #4f5452;
+  display:flex;
+  justify-content: center;
+}
+.question-box{
+  padding-top: 3em;
+
+}
+.decisions {
+  display: flex;
+  justify-content: center;
+  padding-top: 2em;
+  align-content: center;
+}
+
+.btn-val{
+  width: 10em;
+  color: red;
+}
+.val-0{
+  font-size: 5em;
+  color: red;
+}
+.val-25{
+  font-size: 3em;
+  color: lightcoral;
+}
+.val-50{
+  color: green;
+}
+.val-75{
+  color: rgb(72, 155, 70);
+  font-size: 3em;
+}
+.val-100{
+  color: rgb(75, 228, 15);
+  font-size: 5em;
+}

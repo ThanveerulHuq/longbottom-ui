@@ -15,14 +15,17 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
+import { MatDividerModule } from '@angular/material/divider';
 import { MainNavigationComponent } from './core/components/main-navigation/main-navigation.component';
 import { BasicDetailsFormComponent } from './core/components/basic-details-form/basic-details-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SkillQuestionsComponent } from './core/components/skill-questions/skill-questions.component';
 @NgModule({
   declarations: [
     AppComponent,
     MainNavigationComponent,
     BasicDetailsFormComponent,
+    SkillQuestionsComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +41,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatInputModule,
     MatIconModule,
     MatSelectModule,
+    MatDividerModule,
     FormsModule,
     ReactiveFormsModule
   ],

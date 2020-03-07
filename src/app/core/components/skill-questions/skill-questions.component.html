@@ -1,0 +1,36 @@
+<div class="basic-details-card">
+
+  <mat-card class="main-card">
+    <mat-card-header class="card-header">
+      <mat-card-title>Personality Test</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="basic-form">
+      <div class="question-box" *ngFor="let question of questions">
+        <div class="question">
+          {{question.question}}
+        </div>
+        <div class="decisions">
+          <button mat-icon-button class="btn-val" (click)="submitAnswer(question.id,1)">
+            <mat-icon class="val-0">thumb_down</mat-icon>
+          </button>
+          <button mat-icon-button class="btn-val" (click)="submitAnswer(question.id,25)">
+            <mat-icon class="val-25">thumb_down</mat-icon>
+          </button>
+          <button mat-icon-button class="btn-val" (click)="submitAnswer(question.id,50)">
+            <mat-icon class="val-50">thumb_up</mat-icon>
+          </button>
+          <button mat-icon-button class="btn-val" (click)="submitAnswer(question.id,75)">
+            <mat-icon class="val-75">thumb_up</mat-icon>
+          </button>
+          <button mat-icon-button class="btn-val" (click)="submitAnswer(question.id,100)">
+            <mat-icon class="val-100">thumb_up</mat-icon>
+          </button>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions class="card-actions">
+      <button mat-raised-button color="basic">Clear</button>
+      <button mat-raised-button color="primary">Next</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
