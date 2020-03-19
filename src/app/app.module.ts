@@ -20,12 +20,14 @@ import { MainNavigationComponent } from './core/components/main-navigation/main-
 import { BasicDetailsFormComponent } from './core/components/basic-details-form/basic-details-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SkillQuestionsComponent } from './core/components/skill-questions/skill-questions.component';
+import { StudentTraitsComponent } from './core/components/student-traits/student-traits.component';
 @NgModule({
   declarations: [
     AppComponent,
     MainNavigationComponent,
     BasicDetailsFormComponent,
-    SkillQuestionsComponent
+    SkillQuestionsComponent,
+    StudentTraitsComponent
   ],
   imports: [
     BrowserModule,
