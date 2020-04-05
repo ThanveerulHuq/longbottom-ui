@@ -6,7 +6,7 @@ import { StudentTraitsComponent } from './core/components/student-traits/student
 
 
 const routes: Routes = [{ path: '', component: BasicDetailsFormComponent },
-{ path: 'questions', component: SkillQuestionsComponent },
+{ path: 'questions/:id', component: SkillQuestionsComponent },
 { path: 'yourTraits', component: StudentTraitsComponent },
 ];
 

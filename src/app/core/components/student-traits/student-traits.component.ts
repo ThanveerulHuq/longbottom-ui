@@ -16,22 +16,12 @@ export class StudentTraitsComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.traitService.traits) {
-      this.topTraits = this.calculateTopTraits(this.traitService.traits);
+      this.topTraits = this.traitService.traits;
     } else {
       this.router.navigate(['']);
     }
   }
 
-  calculateTopTraits(traitsPercentage: any) {
-    let traitsArray = []
-    for (let trait in traitsPercentage) {
-      traitsArray.push({ trait: trait, value: traitsPercentage[trait] });
-    }
-    return traitsArray.sort((traitA, traitB) => {
-      return traitB.value - traitA.value;
-    })
-
-  }
 
 
 }

@@ -2,39 +2,45 @@
 
   <mat-card class="main-card">
     <mat-card-header class="card-header">
-      <mat-card-title >Basic Details</mat-card-title>
+      <mat-card-title>Basic Details</mat-card-title>
     </mat-card-header>
+    <!-- <form  (ngSubmit)="submitBasicDetails()"> -->
     <mat-card-content class="basic-form">
       <p>
         <mat-form-field appearance="outline" class="form-field" MatFormFieldControl>
           <mat-label>Name</mat-label>
-          <input matInput placeholder="Placeholder">
+          <input matInput placeholder="abc" [formControl]="studentForm.name">
+          <mat-error *ngIf="studentForm.name.invalid">Enter a valid name</mat-error>
         </mat-form-field>
       </p>
       <p>
         <mat-form-field appearance="outline" class="form-field" MatFormFieldControl>
           <mat-label>Contact Number</mat-label>
-          <input matInput placeholder="Placeholder" type="number">
+          <input matInput placeholder="00000000" [formControl]="studentForm.cNumber" type="number">
+          <mat-error *ngIf="studentForm.cNumber.invalid">Enter a valid contact number</mat-error>
         </mat-form-field>
       </p>
       <p>
         <mat-form-field appearance="outline" class="form-field" MatFormFieldControl>
           <mat-label>Standard</mat-label>
-          <mat-select>
-            <mat-option value="option">X</mat-option>
-            <mat-option value="option">XII</mat-option>
+          <mat-select [formControl]="studentForm.standard">
+            <mat-option value="10">X</mat-option>
+            <mat-option value="12">XII</mat-option>
           </mat-select>
+          <mat-error *ngIf="studentForm.standard.invalid">Select a standard</mat-error>
         </mat-form-field>
       </p>
       <p>
-        <!-- <mat-form-field appearance="outline" class="form-field" MatFormFieldControl>
+        <mat-form-field appearance="outline" class="form-field" MatFormFieldControl>
           <mat-label>School</mat-label>
-          <mat-select>
+          <input matInput placeholder="example higher secondary school" type="text" [formControl]="studentForm.school">
+          <mat-error *ngIf="studentForm.school.invalid">Enter a valid school name</mat-error>
+          <!-- <mat-select>
             <mat-option value="option">St.Pauls</mat-option>
             <mat-option value="option">Velammal</mat-option>
-          </mat-select>
-        </mat-form-field> -->
-        <mat-form-field class="example-full-width">
+          </mat-select> -->
+        </mat-form-field>
+        <!-- <mat-form-field class="example-full-width">
           <input matInput
                  placeholder="State"
                  aria-label="State"
@@ -47,19 +53,21 @@
               <small>Population: {{state.population}}</small>
             </mat-option>
           </mat-autocomplete>
-        </mat-form-field> 
+        </mat-form-field>  -->
       </p>
       <p>
         <mat-form-field appearance="outline" class="form-field" MatFormFieldControl>
           <mat-label>Email ID</mat-label>
-          <input matInput placeholder="Placeholder"  type="email">
+          <input matInput placeholder="abc@somemail.com" [formControl]="studentForm.email" type="email">
+          <mat-error *ngIf="studentForm.email.invalid">Enter a valid email</mat-error>
         </mat-form-field>
       </p>
     </mat-card-content>
     <mat-card-actions class="card-actions">
-      <button mat-raised-button color="basic">Clear</button>
-      <button mat-raised-button (click)="submitBasicDetails()" color="primary">Next</button>
+      <button mat-raised-button color="basic" >Clear</button>
+      <button mat-raised-button (click)="submitBasicDetails()" [disabled]="!validateForm()" color="primary">Next</button>
     </mat-card-actions>
+    <!-- </form> -->
   </mat-card>
 
 </div>

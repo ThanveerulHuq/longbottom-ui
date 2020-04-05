@@ -8,11 +8,16 @@ import { environment } from 'src/environments/environment';
 })
 export class AnswerService {
 
-  private submitAnswersURL:string = environment.apiUrl + 'answers/submitAnswers';
+  private submitAnswersURL: string = environment.apiUrl + 'answers/submitAnswers';
+  private submitDetailsURL: string = environment.apiUrl + 'student/addStudent';
 
   constructor(private http: HttpClient) { }
 
-  submitAnswers(answers: any):Observable<any> {
-    return this.http.post(this.submitAnswersURL,answers);
+  submitAnswers(answers: any): Observable<any> {
+    return this.http.post(this.submitAnswersURL, answers);
+  }
+
+  submitBasicDetails(student: any): Observable<any> {
+    return this.http.post(this.submitDetailsURL, student);
   }
 }
