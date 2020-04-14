@@ -1,0 +1,75 @@
+.traits-main {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20em;
+  margin: 2em 0;
+}
+
+.traits-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.traits-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.main-card {
+  width: 8em;
+  margin-top: 1em;
+}
+
+.trait-text {
+  text-align: center;
+  font-family: "PT Serif", serif;
+  font-weight: bold;
+  font-size: 2em;
+  margin: 0 0 1em;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+.careers-main {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10em;
+  margin: 5em 0;
+}
+
+.careers-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.career-content {
+  margin: 0 10em;
+}
+
+.career-name {
+  font-family: "monserrat", serif;
+  font-weight: bold;
+  font-size: 1em;
+  margin: 0 0 1em;
+  text-align: center;
+}
+
+.career-detail {
+  padding: 0 2em;
+}
+
+.info-chips {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.career-course {
+  cursor: pointer;
+}

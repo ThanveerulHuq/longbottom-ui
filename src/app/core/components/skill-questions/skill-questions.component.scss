@@ -5,23 +5,30 @@
 
 .main-card {
   width: 80em;
-  margin-top: 1em;
+  margin-top: 2em;
 }
 
 .card-header {
   display: flex;
   justify-content: center;
+  h4 {
+    font-family: "monserrat", serif;
+    font-weight: bold;
+    font-size: 2em;
+    margin: 0 0 1em;
+    text-align: center;
+  }
 }
 
 .card-actions {
   display: flex;
   justify-content: flex-end;
+  margin: 1em 0;
 }
 
 .basic-form {
   display: flex;
   justify-content: center;
-  padding-top: 1em;
   flex-direction: column;
   align-items: center;
 }
@@ -33,40 +40,44 @@
   font-family: Noto Serif, serif;
   font-size: 30px;
   color: #4f5452;
-  display:flex;
+  display: flex;
   justify-content: center;
+  text-align: center;
+  line-height: 1.5em;
 }
-.question-box{
-  padding-top: 3em;
-
+.question-box {
+  margin-top: 0.5em;
 }
 .decisions {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   padding-top: 2em;
   align-content: center;
 }
 
-.btn-val{
+.btn-val {
   width: 10em;
-  color: red;
 }
-.val-0{
+.val-0 {
   font-size: 5em;
   color: red;
 }
-.val-25{
+.val-25 {
   font-size: 3em;
   color: lightcoral;
 }
-.val-50{
+.val-50 {
   color: green;
 }
-.val-75{
+.val-75 {
   color: rgb(72, 155, 70);
   font-size: 3em;
 }
-.val-100{
+.val-100 {
   color: rgb(75, 228, 15);
   font-size: 5em;
+}
+
+.active {
+  background-color: #d4f5ff;
 }

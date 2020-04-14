@@ -7,7 +7,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-skill-questions',
   templateUrl: './skill-questions.component.html',
-  styleUrls: ['./skill-questions.component.scss']
+  styleUrls: ['./skill-questions.component.scss'],
 })
 export class SkillQuestionsComponent implements OnInit {
 

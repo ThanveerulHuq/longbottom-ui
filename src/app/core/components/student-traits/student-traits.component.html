@@ -1,7 +1,62 @@
-<div class="">
-
+<div class="traits-main">
+    <div class="traits-header">
+        <h3 class="trait-text">Your Top Traits</h3>
+    </div>
+    <div class="traits-content">
+        <mat-card class="main-card" *ngFor="let triat of topTraits.slice(0,3)">
+            <div>
+                <img src="assets/smileys/thinker.png" alt="{{triat.trait}}">
+            </div>
+            <h4 class="trait-text">{{triat.trait}}</h4>
+        </mat-card>
+    </div>
 </div>
+<div class="careers-main">
+    <div class="career-header">
+        <h3 class="trait-text">Your Recommended Careers</h3>
+    </div>
+    <div class="career-content">
+        <mat-accordion>
+            <mat-expansion-panel *ngFor="let career of careers">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <h3 class="career-name">{{career.careerName}}</h3>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="career-detail">
+                    <p>
+                        {{career.description}}
+                    </p>
+                    <mat-chip-list aria-label="Fish selection" class="info-chips">
+                        <mat-chip color="primary" selected>Salary - {{career.salary}}</mat-chip>
+                        <mat-chip color="primary" selected>Scope - {{career.scope}}</mat-chip>
+                        <mat-chip color="primary" class="career-course" selected>Courses - {{career.salary}}
+                            <mat-icon style="margin-left: 5px;">arrow_forward
+                            </mat-icon>
+                        </mat-chip>
+                    </mat-chip-list>
+                </div>
+                <!-- <mat-form-field>
+                    <mat-label>First name</mat-label>
+                    <input matInput>
+                </mat-form-field>
 
-<ul *ngFor="let trait of topTraits">
-    <li>{{trait.trait}} : {{trait.value}}</li>
-</ul>
+                <mat-form-field>
+                    <mat-label>Age</mat-label>
+                    <input matInput type="number" min="1">
+                </mat-form-field> -->
+            </mat-expansion-panel>
+            <!-- <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Self aware panel
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Currently I am {{ 'open'}}
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p>I'm visible because I am open</p>
+            </mat-expansion-panel> -->
+        </mat-accordion>
+    </div>
+</div>

@@ -1,36 +1,49 @@
 <div class="basic-details-card">
 
-  <mat-card class="main-card">
-    <mat-card-header class="card-header">
-      <mat-card-title>Personality Test</mat-card-title>
-    </mat-card-header>
-    <mat-card-content class="basic-form">
+  <div class="main-card">
+    <div class="card-header">
+      <h4>Personality Test</h4>
+    </div>
+    <div class="basic-form">
+
       <div class="question-box" *ngFor="let question of questions">
-        <div class="question">
-          {{question.question}}
-        </div>
-        <div class="decisions">
-          <button mat-icon-button class="btn-val" (click)="markOption(question.id,0)">
-            <mat-icon class="val-0">thumb_down</mat-icon>
-          </button>
-          <button mat-icon-button class="btn-val" (click)="markOption(question.id,25)">
-            <mat-icon class="val-25">thumb_down</mat-icon>
-          </button>
-          <button mat-icon-button class="btn-val" (click)="markOption(question.id,50)">
-            <mat-icon class="val-50">thumb_up</mat-icon>
-          </button>
-          <button mat-icon-button class="btn-val" (click)="markOption(question.id,75)">
-            <mat-icon class="val-75">thumb_up</mat-icon>
-          </button> 
-          <button mat-icon-button class="btn-val" (click)="markOption(question.id,100)">
-            <mat-icon class="val-100">thumb_up</mat-icon>
-          </button>
-        </div>
+        <mat-card class="main-card">
+          <div class="question">
+            {{question.question}}
+          </div>
+          <div class="decisions">
+            <button mat-raised-button class="btn-val" (click)="markOption(question.id,0)"
+              [ngClass]="{'active':question.option===0}">
+              <!-- <mat-icon class="val-0">thumb_down</mat-icon> -->
+              Strongly DisAgree
+            </button>
+            <button mat-raised-button class="btn-val" (click)="markOption(question.id,25)"
+              [ngClass]="{'active':question.option===25}">
+              <!-- <mat-icon class="val-25">thumb_down</mat-icon> -->
+              DisAgree
+            </button>
+            <button mat-raised-button class="btn-val" (click)="markOption(question.id,50)"
+              [ngClass]="{'active':question.option===50}">
+              <!-- <mat-icon class="val-50">thumb_up</mat-icon> -->
+              Neutral
+            </button>
+            <button mat-raised-button class="btn-val" (click)="markOption(question.id,75)"
+              [ngClass]="{'active':question.option===75}">
+              <!-- <mat-icon class="val-75">thumb_up</mat-icon> -->
+              Agree
+            </button>
+            <button mat-raised-button class="btn-val" (click)="markOption(question.id,100)"
+              [ngClass]="{'active':question.option===100}">
+              <!-- <mat-icon class="val-100">thumb_up</mat-icon> -->
+              Strongly Agree
+            </button>
+          </div>
+        </mat-card>
       </div>
-    </mat-card-content>
-    <mat-card-actions class="card-actions">
+    </div>
+    <div class="card-actions">
       <button mat-raised-button color="basic">Clear</button>
-      <button mat-raised-button color="primary" (click)="submitAnswers()">Submit</button>
-    </mat-card-actions>
-  </mat-card>
+      <button mat-raised-button color="primary" style="margin-left:1em;" (click)="submitAnswers()">Submit</button>
+    </div>
+  </div>
 </div>

@@ -10,13 +10,17 @@ import { Router } from '@angular/router';
 export class StudentTraitsComponent implements OnInit {
 
   topTraits: any[];
+  panelOpenState: boolean;
+  careers: any[];
 
   constructor(private traitService: TraitService,
     private router: Router) { }
 
   ngOnInit(): void {
     if (this.traitService.traits) {
-      this.topTraits = this.traitService.traits;
+      console.log(this.traitService.traits)
+      this.topTraits = this.traitService.traits.traits;
+      this.careers = this.traitService.traits.careers;
     } else {
       this.router.navigate(['']);
     }

@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -16,6 +15,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatChipsModule } from '@angular/material/chips';
 import { MainNavigationComponent } from './core/components/main-navigation/main-navigation.component';
 import { BasicDetailsFormComponent } from './core/components/basic-details-form/basic-details-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -44,6 +45,8 @@ import { StudentTraitsComponent } from './core/components/student-traits/student
     MatIconModule,
     MatSelectModule,
     MatDividerModule,
+    MatExpansionModule,
+    MatChipsModule,
     FormsModule,
     ReactiveFormsModule
   ],
