@@ -12,6 +12,7 @@ export class StudentTraitsComponent implements OnInit {
   topTraits: any[];
   panelOpenState: boolean;
   careers: any[];
+  
 
   constructor(private traitService: TraitService,
     private router: Router) { }
@@ -24,6 +25,11 @@ export class StudentTraitsComponent implements OnInit {
     } else {
       this.router.navigate(['']);
     }
+  }
+
+  getCourses(courseName: string) {
+    this.traitService.courseName = courseName;
+    this.router.navigate(['searchCollege']);
   }
 
 

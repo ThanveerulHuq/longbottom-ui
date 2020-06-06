@@ -14,9 +14,9 @@ export class BasicDetailsFormComponent implements OnInit {
   isNameValid: boolean = true;
   studentForm = {
     name: new FormControl('', Validators.required),
-    cNumber: new FormControl('', [Validators.required, Validators.minLength(10)]),
+    cNumber: new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(15), Validators.pattern('[6-9]\\d{9}')]),
     standard: new FormControl('', Validators.required),
-    school: new FormControl('', Validators.required),
+    school: new FormControl('', [Validators.required,Validators.pattern('^[a-zA-Z \-\'\.]+')]),
     email: new FormControl('', [Validators.email, Validators.required])
   };
 

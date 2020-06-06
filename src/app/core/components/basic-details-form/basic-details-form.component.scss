@@ -26,7 +26,30 @@
   align-items: center;
 }
 
+.form-field {
+  width: 25em;
+}
 
-.form-field{
-  width: 25em ;
+@media screen and (max-width: 768px) {
+  .main-card {
+    width: 100%;
+    margin-top: 0em;
+  }
+
+  .form-field {
+    width: 20em;
+  }
+
+  .basic-form {
+    padding-top: 0em;
+  }
+
+  .mat-form-field-wrapper {
+    padding: 0em;
+  }
+
+  .card-actions {
+    justify-content: center;
+    margin-bottom: 5% !important;
+  }
 }

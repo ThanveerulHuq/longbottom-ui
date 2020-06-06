@@ -16,7 +16,7 @@
       <p>
         <mat-form-field appearance="outline" class="form-field" MatFormFieldControl>
           <mat-label>Contact Number</mat-label>
-          <input matInput placeholder="00000000" [formControl]="studentForm.cNumber" type="number">
+          <input matInput  [formControl]="studentForm.cNumber" type="text">
           <mat-error *ngIf="studentForm.cNumber.invalid">Enter a valid contact number</mat-error>
         </mat-form-field>
       </p>
@@ -33,7 +33,7 @@
       <p>
         <mat-form-field appearance="outline" class="form-field" MatFormFieldControl>
           <mat-label>School</mat-label>
-          <input matInput placeholder="example higher secondary school" type="text" [formControl]="studentForm.school">
+          <input matInput placeholder="example higher secondary school"  type="text" [formControl]="studentForm.school">
           <mat-error *ngIf="studentForm.school.invalid">Enter a valid school name</mat-error>
           <!-- <mat-select>
             <mat-option value="option">St.Pauls</mat-option>
@@ -58,7 +58,7 @@
       <p>
         <mat-form-field appearance="outline" class="form-field" MatFormFieldControl>
           <mat-label>Email ID</mat-label>
-          <input matInput placeholder="abc@somemail.com" [formControl]="studentForm.email" type="email">
+          <input matInput placeholder="abc@somemail.com" [formControl]="studentForm.email" [email]="true" type="email">
           <mat-error *ngIf="studentForm.email.invalid">Enter a valid email</mat-error>
         </mat-form-field>
       </p>

@@ -9,9 +9,15 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #d3d3d32b;
 }
 
 .main-content {
   padding: 0em 2em;
 }
 
+@media screen and (max-width: 768px) {
+  .main-content {
+    padding: 0em 0em;
+  }
+}

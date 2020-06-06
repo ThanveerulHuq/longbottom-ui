@@ -1,0 +1,19 @@
+a {
+  color: #ffff;
+  text-decoration: none;
+} /* Unvisited link  */
+a:visited {
+  color: #ffff;
+} /* Visited link    */
+a:hover {
+  color: #ffff;
+} /* Mouse over link */
+a:active {
+  color: #ffff;
+} /* Selected link   */
+
+@media screen and (max-width: 768px) {
+  .mat-toolbar-row {
+    justify-content: center;
+  }
+}

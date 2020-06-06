@@ -28,9 +28,10 @@
                         {{career.description}}
                     </p>
                     <mat-chip-list aria-label="Fish selection" class="info-chips">
-                        <mat-chip color="primary" selected>Salary - {{career.salary}}</mat-chip>
-                        <mat-chip color="primary" selected>Scope - {{career.scope}}</mat-chip>
-                        <mat-chip color="primary" class="career-course" selected>Courses - {{career.salary}}
+                        <mat-chip color="primary" selected><span>Salary - {{career.salary}}</span></mat-chip>
+                        <mat-chip color="primary" selected><span>Scope - {{career.scope}}</span></mat-chip>
+                        <mat-chip color="primary" (click)="getCourses(career.courseName)" class="career-course"
+                            selected><span>Courses - {{career.courseName}}</span>
                             <mat-icon style="margin-left: 5px;">arrow_forward
                             </mat-icon>
                         </mat-chip>

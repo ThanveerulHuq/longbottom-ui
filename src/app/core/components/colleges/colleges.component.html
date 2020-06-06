@@ -1,0 +1,38 @@
+<div class="colleges-main">
+    <div class="search-container">
+        <mat-form-field class="example-chip-list">
+            <mat-chip-list #chipList>
+                <mat-chip *ngFor="let course of selectedCourses" [selectable]="selectable" [removable]="removable"
+                    (removed)="remove(course)">
+                    {{course}}
+                    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                </mat-chip>
+                <input placeholder="Search Course..." #courseInput [formControl]="courseCtrl" [matAutocomplete]="auto"
+                    [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                    [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)">
+            </mat-chip-list>
+            <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+                <mat-option *ngFor="let course of filteredCourses | async" [value]="course">
+                    {{course}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </div>
+    <div class="colleges-container" *ngIf="$colleges|async">
+        <mat-card class="college-card" *ngFor="let college of $colleges|async">
+            <div class="college-content">
+                <a target="_blank" href="{{college.link}}">
+                    <h4 class="college-name">{{college.name}}</h4>
+                </a>
+                <p>{{college.type}}</p>
+            </div>
+            <div class="course-content">
+                <h5><span class="course-heading">Course Name:</span> {{college.course}}</h5>
+                <h5><span class="course-heading">Duration:</span> {{college.duration}}</h5>
+                <h5><span class="course-heading">Fees: </span>{{college.fee}}</h5>
+                <h5 *ngIf="college.seats"><span class="course-heading">Seats:</span> {{college.seats}}</h5>
+            </div>
+
+        </mat-card>
+    </div>
+</div>

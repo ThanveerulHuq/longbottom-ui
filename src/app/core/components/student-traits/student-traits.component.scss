@@ -73,3 +73,34 @@ img {
 .career-course {
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  .trait-text {
+    font-size: 1.5em;
+    margin: 0 0 0em;
+  }
+  .traits-main {
+    padding: 0 1em;
+    margin: 0.5em 0;
+  }
+
+  .careers-main {
+    margin: 1em 0;
+    padding: 0 0;
+  }
+  .career-content {
+    margin: 1em 0em;
+  }
+
+  .career-name {
+    margin: 0 1em;
+  }
+
+  .career-detail {
+    padding: 0 0;
+  }
+
+  mat-chip-list div {
+    flex-direction: column;
+  }
+}
